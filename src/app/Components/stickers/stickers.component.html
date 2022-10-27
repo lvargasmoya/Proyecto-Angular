@@ -1,0 +1,15 @@
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="grid" >
+    <div  class="spaces" fxFlex="23%" fxFlex="23%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let sticker of stickers">
+      <mat-card class="mat-elevation-z4 md-unstyled-image" >
+        <mat-card-header class="pos">
+          <mat-card-title>Title: {{sticker.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image class="image-responsive" [src]='sticker.images.downsized_medium.url' alt="Gif image">
+        <mat-card-content class="pos">
+          <p>Type: {{sticker.type}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
