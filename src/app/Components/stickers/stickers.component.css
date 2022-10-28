@@ -18,7 +18,7 @@
   position: relative;
   padding: 16px;
   border-radius: 4px;
-  height: 95vh;
+  height: 50vh;
   background: #fff;
   color: rgba(0,0,0,.87);
 }
@@ -28,7 +28,7 @@
   overflow: hidden;
 }
 .spaces{
-  margin: 5px;
+  margin: 14px;
 }
 .pos{
   text-align: center;

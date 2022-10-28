@@ -1,0 +1,149 @@
+.content {
+  padding: 5px;
+  margin: 5px;
+}
+
+.content > mat-card {
+  width: 200px;
+  height: 90vh;
+}
+.md-unstyled-image img{
+  max-width: 100%;
+  width: auto;
+  height: auto !important;
+}
+.mat-card{
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  position: relative;
+  padding: 16px;
+  border-radius: 4px;
+  height: 50vh;
+  background: #fff;
+  color: rgba(0,0,0,.87);
+}
+.mat-card-image{
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
+}
+.spaces{
+  margin: 14px;
+}
+.pos{
+  text-align: center;
+}
+.pos p{
+  margin-top: 1rem;
+  font-weight: bolder;
+}
+:focus{outline: none;}
+
+/* necessary to give position: relative to parent. */
+input[type="text"]{
+  font: 15px/24px 'Muli', sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+:focus{
+  outline: none;
+}
+
+.col-3{
+  width: 27.33%;
+  margin: 40px 3%;
+  position: relative;
+} /* necessary to give position: relative to parent. */
+input[type="text"]{
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: rgb(156, 156, 156);
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+.effect-21{
+  border: 1px solid #ccc;
+  padding: 7px 14px;
+  transition: 0.4s;
+  background: transparent;
+}
+.effect-21 ~ .focus-border:before,
+.effect-21 ~ .focus-border:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #24bbf7;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+.effect-21 ~ .focus-border:after{
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  transition-delay: 0.6s;
+}
+.effect-21 ~ .focus-border i:before,
+.effect-21 ~ .focus-border i:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #24bbf7;
+  transition: 0.2s;
+}
+.effect-21 ~ .focus-border i:after{
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  transition-delay: 0.4s;
+}
+.effect-21:focus ~ .focus-border:before,
+.effect-21:focus ~ .focus-border:after,
+.has-content.effect-21 ~ .focus-border:before,
+.has-content.effect-21 ~ .focus-border:after{
+  width: 100%;
+  transition: 0.2s;
+  transition-delay: 0.6s;
+}
+.effect-21:focus ~ .focus-border:after,
+.has-content.effect-21 ~ .focus-border:after{
+  transition-delay: 0.2s;
+}
+.effect-21:focus ~ .focus-border i:before,
+.effect-21:focus ~ .focus-border i:after,
+.has-content.effect-21 ~ .focus-border i:before,
+.has-content.effect-21 ~ .focus-border i:after{
+  height: 100%;
+  transition: 0.2s;
+}
+.effect-21:focus ~ .focus-border i:after,
+.has-conten.effect-21 ~ .focus-border i:after{
+  transition-delay: 0.4s;
+}
+.effect-21 ~ label{
+  position: absolute;
+  left: 14px;
+  width: 100%;
+  top: 10px;
+  color: rgb(204, 204, 204);
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+.effect-21:focus ~ label, .has-content.effect-21 ~ label{
+  top: -18px;
+  left: 0;
+  font-size: 12px;
+  color: #24bbf7;
+  transition: 0.3s;
+}

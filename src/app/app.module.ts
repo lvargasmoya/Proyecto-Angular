@@ -34,6 +34,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
       {path: '', component:HomeComponent},
       {path: 'gifs', component:GifsComponent},
       {path: 'stickers', component:StickersComponent},
+      {path: 'search', component:SearchComponent},
       {path: '**', component:PageNotFoundComponent},
     ]),
     BrowserAnimationsModule,

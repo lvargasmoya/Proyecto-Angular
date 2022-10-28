@@ -1,3 +1,23 @@
-<div class="container-fluid text-center">
-  <h1>View Search</h1>
+
+<div class="content">
+  <div class="col-3 input-effect">
+    <input type="text" placeholder="" class="effect-21" #gif (keyup.enter)="search(gif.value)">
+    <label>Search for a Gif</label>
+    <span class="focus-border">
+      <i></i>
+    </span>
+  </div>
+  <div fxLayout="row wrap" fxLayoutGap="grid" >
+    <div  class="spaces" fxFlex="23%" fxFlex="23%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let gif of gifs">
+      <mat-card class="mat-elevation-z4 md-unstyled-image" >
+        <mat-card-header class="pos">
+          <mat-card-title>Title: {{gif.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image class="image-responsive" [src]='gif.images.fixed_height_downsampled.url' alt="Gif image">
+        <mat-card-content class="pos">
+          <p>Type: {{gif.type}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>

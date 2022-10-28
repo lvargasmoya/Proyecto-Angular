@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -6,20 +7,23 @@ import { DataService } from 'src/app/data.service';
   templateUrl: './stickers.component.html',
   styleUrls: ['./stickers.component.css']
 })
-export class StickersComponent implements OnInit {
-
+export class StickersComponent implements OnInit, OnDestroy {
   stickers: any[] = [];
+  subscription!: Subscription;
+
 
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.getTrendingStickers()
-      .subscribe((response: any) => {
-        this.stickers = response.data;
-
+    this.dataService.getTrendingStickers();
+    this.subscription = this.dataService.getGifs()
+      .subscribe((response: any)=>{
+        this.stickers = response;
       });
-      console.log(this.stickers)
   }
 
+  ngOnDestroy(){
+    this.subscription.unsubscribe();
+  }
 }

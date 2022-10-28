@@ -10,7 +10,7 @@
 .md-unstyled-image img{
   max-width: 100%;
   width: auto;
-  height: auto !important; /* needs to be important because md-card also sets it that way */
+  height: auto !important;
 }
 .mat-card{
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -18,7 +18,7 @@
   position: relative;
   padding: 16px;
   border-radius: 4px;
-  height: 85vh;
+  height: 50vh;
   background: #fff;
   color: rgba(0,0,0,.87);
 }
@@ -28,7 +28,7 @@
   overflow: hidden;
 }
 .spaces{
-  margin: 5px;
+  margin: 14px;
 }
 .pos{
   text-align: center;
