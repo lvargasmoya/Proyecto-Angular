@@ -47,5 +47,8 @@ h1,h2{
   background-repeat: repeat-x;
   background-size: 100% 2px;
   transition: background-size .3s;
+  font-size: 30px;
 }
-
+.p-size{
+  font-size: 20px;
+}
